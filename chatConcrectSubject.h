@@ -8,13 +8,17 @@
 
 #pragma once
 #include "chatSubject.h"
-#include "string.h"
+#include <string>
 
 class ChatConcreteSubject : public ChatSubject {
     private:
         std::list<std::string> messages;
         
     public:
+
+        ChatConcreteSubject();
+
+        ~ChatConcreteSubject();
         std::list<std::string> getState();
         void setState(std::string s);
         

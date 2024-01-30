@@ -17,6 +17,8 @@ class ChatSubject {
     private:
         // observers list
         std::list<std::shared_ptr<Observer>> members;
+         
+        
         
     public:
         ChatSubject();
