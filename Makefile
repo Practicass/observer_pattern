@@ -12,8 +12,8 @@ all:  clean main
 #-----------------------------------------------------------
 # Compilacion
 #g++ -std=c++11  main.cpp -o main
-main.o: main.cpp  
-	${CC} -c main.cpp  ${CPPFLAGS}
+main.o: main.cc 
+	${CC} -c main.cc  ${CPPFLAGS}
 
 
 # Linkado
