@@ -28,7 +28,7 @@
 # 	${RM} main
 	
 PROG:=main
-SRCS:=main.cc userConcreteObserver.cc  chatConcreteSubject.cc chatSubject.cc observer.cc 
+SRCS:=main.cc userConcreteObserver.cc  feedConcreteSubject.cc feedSubject.cc observer.cc 
 
 CXX:=g++ -std=c++20 -Wall -Wfatal-errors 
 

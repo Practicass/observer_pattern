@@ -7,20 +7,21 @@
  */
 
 #pragma once
-#include "chatSubject.h"
+#include "feedSubject.h"
 #include <string>
 #include <iostream>
 
-class ChatConcreteSubject : public ChatSubject {
+class FeedConcreteSubject : public FeedSubject {
     private:
         std::list<std::string> messages;
         
     public:
 
-        ChatConcreteSubject();
+        FeedConcreteSubject();
 
-        ~ChatConcreteSubject();
+        ~FeedConcreteSubject();
         std::list<std::string> getState();
         void setState(std::string s);
+        void setState(std::string s, std::string interest);
         
 };

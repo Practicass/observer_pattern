@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "chatConcrectSubject.h"
+#include "feedConcreteSubject.h"
 #include "messages.cc"
 #include <list>
 #include <memory>
@@ -15,19 +15,21 @@ class UserConcreteObserver : public Observer {
     private:
         std::string name;
         std::list<std::string> msg;
-        ChatConcreteSubject* subject;
+        FeedConcreteSubject* subject;
         std::ofstream file;
 
         
         
         
     public:
-        UserConcreteObserver(std::string n, ChatConcreteSubject* s, std::string filename);
+        UserConcreteObserver(std::string n, FeedConcreteSubject* s, std::string filename);
+        UserConcreteObserver(std::string n, FeedConcreteSubject* s);
         ~UserConcreteObserver();
       
         void Update() override;
         std::list<std::string> getMessages();
 
-        void Chat(int i);
+        void Send(int i);
+        void Send(int i, std::string interest);
         
 };

@@ -1,6 +1,6 @@
 # C++ Observer Pattern Example
 
-This is a simple implementation of the Observer Pattern in C++. The example demonstrates a chat system where users (observers) receive messages from a chat (subject).
+This is a simple implementation of the Observer Pattern in C++. The example demonstrates a feed system where users (observers) receive messages from a feed (subject).
 
 
 
@@ -16,8 +16,8 @@ This is a simple implementation of the Observer Pattern in C++. The example demo
 
 ## How it works
 
-- Users (observers) can subscribe (`attach`) to the chat system (`ChatConcreteSubject`).
-- The chat system can send messages to all subscribed users (`notify`).
+- Users (observers) can subscribe (`attach`) to the feed system (`FeedConcreteSubject`).
+- The feed system can send messages to all subscribed users (`notify`).
 - Users will receive and print the messages.
 
 ## Contributing

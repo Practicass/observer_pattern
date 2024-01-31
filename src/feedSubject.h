@@ -13,18 +13,24 @@
 #include <memory>
 #include <string>
 
-class ChatSubject {
+class FeedSubject {
 
     private:
         // observers list
         std::list<std::shared_ptr<Observer>> members;
+        std::list<std::shared_ptr<Observer>> membersCristiano;
+        std::list<std::shared_ptr<Observer>> membersMessi;
+
+        
          
         
         
     public:
-        ChatSubject();
-        ~ChatSubject();
+        FeedSubject();
+        ~FeedSubject();
         void Attach(std::shared_ptr<Observer> o);
+        void Attach(std::shared_ptr<Observer> o, std::string interest);
         void Detach(std::shared_ptr<Observer> o);
         void Notify();
+        void Notify(std::string interest);
 };
