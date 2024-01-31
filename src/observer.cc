@@ -8,6 +8,4 @@
 #include "observer.h"
 
 
-void Observer::Update(){
-    
-}
+void Observer::Update(){}

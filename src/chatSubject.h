@@ -11,6 +11,7 @@
 #include "observer.h"
 #include <list>
 #include <memory>
+#include <string>
 
 class ChatSubject {
 

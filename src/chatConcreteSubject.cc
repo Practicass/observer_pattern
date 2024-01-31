@@ -10,6 +10,7 @@ std::list<std::string> ChatConcreteSubject::getState(){
 }
 
 void ChatConcreteSubject::setState(std::string s){
+
     messages.push_back(s);
     Notify();
 }

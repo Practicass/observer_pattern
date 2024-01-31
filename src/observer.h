@@ -6,10 +6,11 @@
  * -----------------------------------------------------------------------------
  */
 #pragma once 
+#include <string>
 
 class Observer{
     private:
 
     public:
-        void Update();
+        virtual void Update();
 };

@@ -9,6 +9,7 @@
 #pragma once
 #include "chatSubject.h"
 #include <string>
+#include <iostream>
 
 class ChatConcreteSubject : public ChatSubject {
     private:
