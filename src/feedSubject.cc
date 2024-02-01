@@ -20,7 +20,11 @@ void FeedSubject::Attach(std::shared_ptr<Observer> o){
     members.push_back(o);
 }
 void FeedSubject::Attach(std::shared_ptr<Observer> o, std::string interest){
-    members.push_back(o);
+    if(interest == "cristiano"){
+        membersCristiano.push_back(o);
+    }else if(interest == "messi"){
+        membersMessi.push_back(o);
+    }
 }
 
 void FeedSubject::Detach(std::shared_ptr<Observer> o){
@@ -28,19 +32,23 @@ void FeedSubject::Detach(std::shared_ptr<Observer> o){
 }
 
 void FeedSubject::Notify(){
+
     for (auto i : members) {
         i->Update();
     }
+
 }
 
 void FeedSubject::Notify(std::string interest){
+
     if (interest == "cristiano")
     {
+                                
         for (auto i : membersCristiano) {
             i->Update();
         }
     }else
-    {
+    {            
         for (auto i : membersMessi) {
             i->Update();
         }

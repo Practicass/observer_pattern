@@ -91,7 +91,7 @@ int main()
 
           mes->Send(1, "messi");
           cris->Send(2, "cristiano");
-          cris->Send(2, "cristiano");
+          cris->Send(3, "cristiano");
 
 
           // std::dynamic_pointer_cast<UserConcreteObserver>(user3)->Send(3);

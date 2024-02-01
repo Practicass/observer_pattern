@@ -12,10 +12,11 @@
 #include <list>
 #include <memory>
 #include <string>
+#include <iostream>
 
 class FeedSubject {
 
-    private:
+    protected:
         // observers list
         std::list<std::shared_ptr<Observer>> members;
         std::list<std::shared_ptr<Observer>> membersCristiano;

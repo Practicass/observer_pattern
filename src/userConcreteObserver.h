@@ -11,7 +11,7 @@
 #include <cstdlib> 
 #include <ctime>   
 
-class UserConcreteObserver : public Observer {
+class UserConcreteObserver : public Observer, public std::enable_shared_from_this<UserConcreteObserver>{
     private:
         std::string name;
         std::list<std::string> msg;

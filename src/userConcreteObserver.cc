@@ -18,21 +18,24 @@ void UserConcreteObserver::Send(int i ){
 
     std::srand(i);
     int randomNumber = std::rand() % 49;
-
+    msg.push_back(MESSAGES[randomNumber]);
     subject->setState(MESSAGES[randomNumber]);
         
-    
+              
+
 }
 void UserConcreteObserver::Send(int i, std::string interest){
     std::srand(i);
     int randomNumber = std::rand() % 49;
-
+    msg.push_back(MESSAGES[randomNumber]);
     subject->setState(MESSAGES[randomNumber], interest);
+
 }
 
+
 void UserConcreteObserver::Update(){
-    
-    msg = subject->getState();
+    std::shared_ptr<Observer> aux = shared_from_this();
+    msg = subject->getState(aux);
     getMessages();
 }
 
@@ -42,4 +45,5 @@ std::list<std::string> UserConcreteObserver::getMessages(){
         file << i << std::endl;
     }
     return msg;
+
 }
