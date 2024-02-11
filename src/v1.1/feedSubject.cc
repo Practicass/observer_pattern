@@ -5,7 +5,7 @@
  *         
  * -----------------------------------------------------------------------------
  */
-#include "feedSubject.h"
+#include "./feedSubject.h"
 
 
 FeedSubject::FeedSubject(){
@@ -16,9 +16,7 @@ FeedSubject::~FeedSubject(){
 
 }
 
-void FeedSubject::Attach(std::shared_ptr<Observer> o){
-    members.push_back(o);
-}
+
 void FeedSubject::Attach(std::shared_ptr<Observer> o, std::string interest){
     if(interest == "cristiano"){
         membersCristiano.push_back(o);
@@ -31,13 +29,7 @@ void FeedSubject::Detach(std::shared_ptr<Observer> o){
     members.remove(o);
 }
 
-void FeedSubject::Notify(){
 
-    for (auto i : members) {
-        i->Update();
-    }
-
-}
 
 void FeedSubject::Notify(std::string interest){
 

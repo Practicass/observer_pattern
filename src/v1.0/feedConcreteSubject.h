@@ -7,7 +7,7 @@
  */
 
 #pragma once
-#include "feedSubject.h"
+#include "./feedSubject.h"
 #include <string>
 #include <iostream>
 #include <algorithm>
@@ -27,8 +27,8 @@ class FeedConcreteSubject : public FeedSubject {
 
         ~FeedConcreteSubject();
         std::list<std::string> getState();
-        std::list<std::string> getState(std::shared_ptr<Observer> o);
+
         void setState(std::string s);
-        void setState(std::string s, std::string interest);
+
         
 };

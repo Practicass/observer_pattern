@@ -8,7 +8,7 @@
  */
 #pragma once
 
-#include "observer.h"
+#include "./observer.h"
 #include <list>
 #include <memory>
 #include <string>
@@ -29,9 +29,9 @@ class FeedSubject {
     public:
         FeedSubject();
         ~FeedSubject();
-        void Attach(std::shared_ptr<Observer> o);
+
         void Attach(std::shared_ptr<Observer> o, std::string interest);
         void Detach(std::shared_ptr<Observer> o);
-        void Notify();
+
         void Notify(std::string interest);
 };

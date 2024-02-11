@@ -1,4 +1,4 @@
-#include "userConcreteObserver.h"
+#include "./userConcreteObserver.h"
 
 
 UserConcreteObserver::UserConcreteObserver(std::string n, FeedConcreteSubject* s, std::string filename): name(n), subject(s){
@@ -14,16 +14,6 @@ UserConcreteObserver::UserConcreteObserver(std::string n, FeedConcreteSubject* s
 UserConcreteObserver::UserConcreteObserver(std::string n, FeedConcreteSubject* s): name(n), subject(s){}
 UserConcreteObserver::~UserConcreteObserver(){}
 
-void UserConcreteObserver::Send(int i ){
-
-    std::srand(i);
-    int randomNumber = std::rand() % 49;
-    msg.push_back(MESSAGES[randomNumber]);
-    subject->setState(MESSAGES[randomNumber]);
-        
-              
-
-}
 void UserConcreteObserver::Send(int i, std::string interest){
     std::srand(i);
     int randomNumber = std::rand() % 49;

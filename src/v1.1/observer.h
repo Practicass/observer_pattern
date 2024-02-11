@@ -5,7 +5,12 @@
  *         
  * -----------------------------------------------------------------------------
  */
-#include "observer.h"
+#pragma once 
+#include <string>
 
+class Observer{
+    private:
 
-void Observer::Update(){}
+    public:
+        virtual void Update();
+};

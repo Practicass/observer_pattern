@@ -1,13 +1,11 @@
 
-#include "feedConcreteSubject.h"
+#include "./feedConcreteSubject.h"
 
 
 FeedConcreteSubject::FeedConcreteSubject(){}
 FeedConcreteSubject::~FeedConcreteSubject(){}
 
-std::list<std::string> FeedConcreteSubject::getState(){
-    return messages;
-}
+
 std::list<std::string> FeedConcreteSubject::getState(std::shared_ptr<Observer> o){
     if(std::find(membersCristiano.begin(), membersCristiano.end(), o) != membersCristiano.end()){
         if(std::find(membersMessi.begin(), membersMessi.end(), o) != membersMessi.end()){
@@ -24,11 +22,7 @@ std::list<std::string> FeedConcreteSubject::getState(std::shared_ptr<Observer> o
     }
 }
 
-void FeedConcreteSubject::setState(std::string s){
 
-    messages.push_back(s);
-    Notify();
-}
 
 void FeedConcreteSubject::setState(std::string s, std::string interest){
     if(interest == "cristiano"){

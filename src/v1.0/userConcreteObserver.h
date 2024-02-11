@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "feedConcreteSubject.h"
+#include "./feedConcreteSubject.h"
 #include "messages.cc"
 #include <list>
 #include <memory>
@@ -30,6 +30,6 @@ class UserConcreteObserver : public Observer, public std::enable_shared_from_thi
         std::list<std::string> getMessages();
 
         void Send(int i);
-        void Send(int i, std::string interest);
+
         
 };
