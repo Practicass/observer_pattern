@@ -18,7 +18,7 @@ class FeedSubject {
 
     protected:
         // observers list
-        std::list<std::shared_ptr<Observer>> members;
+
         std::list<std::shared_ptr<Observer>> membersCristiano;
         std::list<std::shared_ptr<Observer>> membersMessi;
 
@@ -31,7 +31,7 @@ class FeedSubject {
         ~FeedSubject();
 
         void Attach(std::shared_ptr<Observer> o, std::string interest);
-        void Detach(std::shared_ptr<Observer> o);
+        void Detach(std::shared_ptr<Observer> o, std::string interest);
 
         void Notify(std::string interest);
 };

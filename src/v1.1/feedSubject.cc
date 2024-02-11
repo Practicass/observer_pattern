@@ -25,8 +25,13 @@ void FeedSubject::Attach(std::shared_ptr<Observer> o, std::string interest){
     }
 }
 
-void FeedSubject::Detach(std::shared_ptr<Observer> o){
-    members.remove(o);
+void FeedSubject::Detach(std::shared_ptr<Observer> o, std::string interest){
+    if(interest == "cristiano"){
+        membersCristiano.remove(o);
+    }else if(interest == "messi"){
+        membersMessi.remove(o);
+    }
+
 }
 
 
