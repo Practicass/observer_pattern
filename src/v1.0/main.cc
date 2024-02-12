@@ -17,19 +17,19 @@ int main()
         FeedConcreteSubject* feed = new FeedConcreteSubject();
 
 
-        std::shared_ptr<Observer> user1 = std::make_shared<UserConcreteObserver>("Pablo", feed, "feedPablo.txt");
-        std::shared_ptr<Observer> user2 = std::make_shared<UserConcreteObserver>("Miguel",feed, "feedMiguel.txt");
-        std::shared_ptr<Observer> user3 = std::make_shared<UserConcreteObserver>("Lucas", feed, "feedLucas.txt");
+        std::shared_ptr<Observer> Pablo = std::make_shared<UserConcreteObserver>("Pablo", feed, "feedPablo.txt");
+        std::shared_ptr<Observer> Miguel = std::make_shared<UserConcreteObserver>("Miguel",feed, "feedMiguel.txt");
+        std::shared_ptr<Observer> Lucas = std::make_shared<UserConcreteObserver>("Lucas", feed, "feedLucas.txt");
 
-        feed->Attach(user1);
-        feed->Attach(user2);
-        feed->Attach(user3);
+        feed->Attach(Pablo);
+        feed->Attach(Miguel);
+        feed->Attach(Lucas);
 
-        std::dynamic_pointer_cast<UserConcreteObserver>(user3)->Send(3);
-        std::dynamic_pointer_cast<UserConcreteObserver>(user1)->Send(1);
-        std::dynamic_pointer_cast<UserConcreteObserver>(user2)->Send(2);
+        std::dynamic_pointer_cast<UserConcreteObserver>(Lucas)->Send(3);
+        std::dynamic_pointer_cast<UserConcreteObserver>(Pablo)->Send(1);
+        std::dynamic_pointer_cast<UserConcreteObserver>(Miguel)->Send(2);
 
-        feed->Detach(user3);
+        feed->Detach(Lucas);
 
-        std::dynamic_pointer_cast<UserConcreteObserver>(user1)->Send(1);                   
+        std::dynamic_pointer_cast<UserConcreteObserver>(Pablo)->Send(1);                   
 }
