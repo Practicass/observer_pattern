@@ -15,7 +15,7 @@
 
 class FeedConcreteSubject : public FeedSubject {
     private:
-        std::list<std::string> messages;
+
         std::list<std::string> messagesMessi;
         std::list<std::string> messagesCristiano;
 

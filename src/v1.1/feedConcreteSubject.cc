@@ -18,7 +18,14 @@ std::list<std::string> FeedConcreteSubject::getState(std::shared_ptr<Observer> o
     }else if(std::find(membersMessi.begin(), membersMessi.end(), o) != membersMessi.end()){
         return messagesMessi;
     }else{
-        return messages;
+        std::list<std::string> ans;
+        for (auto i : messagesCristiano){
+            ans.push_back(i);
+        }
+        for (auto i : messagesMessi){
+            ans.push_back(i);
+        }
+
     }
 }
 
